@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Login</title>
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="./assets/imgs/frontImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Every new friend is a <br> new adventure</span>
+          <span class="text-2">Let's get connected</span>
+        </div>
+      </div>
+      <div class="back">
+        <img class="backImg" src="./assets/imgs/frontImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-2">Let's get started</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+          <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="text"><a href="#">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+              <div class="social-icons" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                <a href="#" onclick="signInWithFacebook()" style="display: flex; justify-content: center; align-items: center; font-size: 2.5rem; color: #3b5998;"><i class="fab fa-facebook"></i></a>
+                <a href="#" onclick="signInWithGoogle()" style="display: flex; justify-content: center; align-items: center; font-size: 2.5rem; color: #db3236;"><i class="fab fa-google"></i></a>
+                <a href="#" onclick="signInWithPhoneNumber(phoneNumber, appVerifier)" style="display: flex; justify-content: center; align-items: center; font-size: 2.5rem; color: #1473e6;"><i class="fas fa-phone"></i></a>
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+            </div>
+        </form>
+      </div>
+        <div class="signup-form">
+          <div class="title">Signup</div>
+        <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" id="email" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Enter your password" required>
+              </div>
+              <div class="button input-box">
+                <input type="submit" id="submit" onclick="signUpWithEmail()" value="Sumbit">
+              </div>
+              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+            </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script> <!-- If you're using Firebase Authentication -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script> <!-- If you're using Firestore -->
+<!-- Include other Firebase SDKs as needed -->
+<script src="./assets/js/app.js"></script>
+</html>
